@@ -29,5 +29,18 @@ public class Homecontroller {
 		return homeservice.edit(req);
 	}
 	
-
+	@GetMapping("/input") // 글추가화면
+	public String input() {
+		return "/input";
+	}
+	
+	@PostMapping("/input") // 글추가
+	public String input(HttpServletRequest req) {
+		return homeservice.input(req);
+	}
+	
+	@GetMapping("/accept") //승인,미승인 처리
+	public String accept(HttpServletRequest req) {
+		return homeservice.accept(req);
+	}
 }

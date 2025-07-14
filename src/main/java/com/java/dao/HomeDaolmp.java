@@ -25,4 +25,20 @@ public class HomeDaolmp implements HomeDao {
 		return homeMapper.findOne(no);
 	}
 
+	@Override // 디테일에서 수정완료 정보이동
+	public int edit(Ex1DTO ex1DTO) {
+		return homeMapper.edit(ex1DTO);
+	}
+
+	@Override // 글추가
+	public Ex1DTO save(Ex1DTO ex1DTO) {
+		int status = homeMapper.save(ex1DTO);
+		return (status ==1) ? ex1DTO :null;
+	}
+
+	@Override
+	public int accept(Ex1DTO ex1DTO) {
+		return homeMapper.accept(ex1DTO);
+	}
+
 }
