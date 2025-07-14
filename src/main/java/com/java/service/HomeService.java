@@ -1,0 +1,15 @@
+package com.java.service;
+
+import org.springframework.ui.Model;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+public interface HomeService {
+
+	String list(Model model, HttpServletRequest req); // servicelmp 서비스 호출 전체 리스트
+
+	String detail(Model model, HttpServletRequest req); // 제목 클릭시 디테일 화면이동
+
+	String edit(HttpServletRequest req);
+
+}
